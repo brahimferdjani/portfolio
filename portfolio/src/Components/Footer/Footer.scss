@@ -1,0 +1,20 @@
+footer {
+  background-color: white;
+  height: 14.5vh;
+}
+
+.footer {
+  display: flex;
+  padding: 15px 0px;
+  justify-content: center;
+  gap: 10px;
+  background-image: linear-gradient(to right, var(--gray-color), #1a1a1a00);
+  margin-right: 50px;
+  justify-content: flex-end;
+  text-align: right;
+  align-items: center;
+
+  p {
+    color: var(--gray-color);
+  }
+}

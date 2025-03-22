@@ -1,0 +1,110 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 50px auto;
+  padding: 15px 0px;
+  flex: 1;
+  position: relative;
+
+  input,
+  textarea {
+    color: var(--blue-color);
+    padding: 10px;
+    border: 1px solid var(--gray-color);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    margin: 10px 0px;
+    padding: 10px 20px;
+    width: 500px;
+    height: 100%;
+    resize: none;
+    font-family: "manrope", sans-serif;
+  }
+
+  input {
+    height: 10px;
+  }
+
+  #message {
+    height: 100px;
+    overflow: scroll;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: var(--gray-color);
+    width: 150px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: large;
+    font-weight: 800;
+
+    &:hover {
+      background-color: orange;
+      font-size: larger;
+      width: 170px;
+      font-weight: 300;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  p {
+    color: var(--blue-color);
+  }
+}
+
+#linkedin {
+  position: absolute;
+  top: 25%;
+  right: 15%;
+  text-decoration: none;
+  color: #1a1a1a80;
+
+  i {
+    font-size: 2.5em;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--blue-color);
+      scale: 1.2;
+    }
+  }
+
+  p {
+    text-align: left;
+    padding: 0.5em;
+    font-weight: 500;
+  }
+}
+
+#github {
+  position: absolute;
+  top: 38%;
+  right: 16%;
+  text-decoration: none;
+  color: #1a1a1a80;
+
+  i {
+    font-size: 2.5em;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      scale: 1.2;
+      color: black;
+    }
+  }
+
+  p {
+    text-align: left;
+    padding: 0.5em;
+    font-weight: 500;
+  }
+}

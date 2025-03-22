@@ -1,0 +1,62 @@
+.project_box {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  margin: 30px auto;
+  height: 53vh;
+  padding: 16px;
+  margin: 37px auto;
+  color: var(--gray-color);
+
+  .image_box {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    align-items: center;
+    width: 100%;
+
+    .arrows {
+      border: none;
+      background-color: transparent;
+      color: var(--gray-color);
+      font-size: 2em;
+      height: 70px;
+      color: orange;
+      padding: 10px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    #image {
+      padding: 0px;
+      width: 35%;
+      border: 1px solid var(--gray-color);
+      border-radius: 15px;
+    }
+  }
+
+  .description_box {
+    padding-right: 20px;
+    .title {
+      width: 80%;
+      color: var(--blue-color);
+    }
+
+    .description {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+
+    .link {
+      a {
+        color: var(--blue-color);
+
+        &:hover,
+        &:active {
+          color: orange;
+        }
+      }
+    }
+  }
+}

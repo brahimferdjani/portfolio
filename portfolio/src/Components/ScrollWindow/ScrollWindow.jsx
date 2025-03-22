@@ -6,6 +6,7 @@ import { useEffect } from "react";
 function ScrollWindow() {
   const ref = useRef(null);
   const tlRef = useRef(null); // Store timeline reference
+  const animationRef = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(
@@ -22,7 +23,7 @@ function ScrollWindow() {
   useLayoutEffect(() => {
     let context = gsap.context(() => {
       const tl = gsap.timeline();
-      tlRef.current = tl; // Store timeline in ref
+      animationRef.current = tlRef.current = tl; // Store timeline in ref
 
       tl.to("#title_one", {
         opacity: 0,
@@ -149,6 +150,12 @@ function ScrollWindow() {
     }
   };
 
+  const restartAnimation = () => {
+    if (animationRef.current) {
+      animationRef.current.restart();
+    }
+  };
+
   return (
     <>
       <button id="skip" type="button" onClick={skipAnimation}>
@@ -175,11 +182,7 @@ function ScrollWindow() {
           <p id="p_two">Fun !</p>
         </div>
         <div className="restart">
-          <button
-            type="button"
-            onClick={() => window.location.reload()}
-            id="button"
-          >
+          <button type="button" onClick={restartAnimation} id="button">
             Restart ?
           </button>
           <i id="face" className="fa-solid fa-face-smile"></i>

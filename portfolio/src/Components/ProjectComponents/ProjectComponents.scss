@@ -46,11 +46,12 @@
     #image {
       padding: 0px;
       width: 35%;
-      border: 1px solid var(--gray-color);
       border-radius: 15px;
+      border: 2px solid var(--gray-color);
 
       @media (max-width: 1027px) {
-        width: 65%;
+        min-width: 45%;
+        border: 2px solid white;
       }
     }
   }
@@ -91,11 +92,12 @@
       @media (max-width: 1027px) {
         list-style: none;
         padding: 0px;
-        overflow-y: hidden;
-        overflow-x: hidden;
       }
       a {
         color: var(--blue-color);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
 
         @media (max-width: 1027px) {
           font-weight: 400;

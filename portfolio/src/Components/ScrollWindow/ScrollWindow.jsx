@@ -14,7 +14,7 @@ function ScrollWindow() {
         opacity: 0,
         duration: 1,
       })
-        .from("#react, #dessin, #logo, #illustration, #adobe", {
+        .from("#react, #sass, #dessin, #logo, #illustration, #adobe", {
           y: 100,
           opacity: 0,
           duration: 1,
@@ -25,12 +25,15 @@ function ScrollWindow() {
           opacity: 0,
           duration: 1,
         })
-        .from("#react_bar, #artwork_bar, #photoshop_bar, #illustrator_bar", {
-          y: 100,
-          opacity: 0,
-          duration: 1,
-          stagger: 0.2,
-        })
+        .from(
+          "#react_bar, #sass_bar, #artwork_bar, #photoshop_bar, #illustrator_bar",
+          {
+            y: 100,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+          }
+        )
         .from("#lang_container", {
           y: 100,
           opacity: 0,
@@ -59,6 +62,7 @@ function ScrollWindow() {
           <p id="title_tech">Skills :</p>
           <ul>
             <li id="react">React</li>
+            <li id="sass">SASS</li>
             <li id="dessin">Graphic Design</li>
             <li id="logo">Logo</li>
             <li id="illustration">Artwork</li>
@@ -70,6 +74,11 @@ function ScrollWindow() {
             <li id="react_bar">
               <div className="react_bar">
                 <div>React</div>
+              </div>
+            </li>
+            <li id="sass_bar">
+              <div className="sass_bar">
+                <div>SASS</div>
               </div>
             </li>
             <li id="artwork_bar">

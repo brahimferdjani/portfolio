@@ -35,12 +35,6 @@ function ProjectComponents() {
   };
   const currentProject = projectsDetails[currentIndex];
 
-  const linkDescriptions = [
-    " - Link to the site",
-    " - Link to Figma",
-    " - Link to github",
-  ];
-
   return (
     <div ref={ref} className="project_box">
       <div className="image_box">
@@ -77,10 +71,10 @@ function ProjectComponents() {
         <ul className="link">
           {currentProject.link.map((link, index) => (
             <li key={index}>
-              <Link to={link} target="_blank" rel="noopener noreferrer">
-                {link}
-              </Link>
-              <span>{linkDescriptions[index]}</span>
+              <a href={link.url} target="_blank" rel="noopener noreferrer">
+                {link.url}
+              </a>
+              <span>{link.detail}</span>
             </li>
           ))}
         </ul>

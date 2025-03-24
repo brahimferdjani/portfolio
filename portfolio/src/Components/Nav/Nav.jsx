@@ -1,6 +1,6 @@
 import "./Nav.scss";
 import { Link, useLocation } from "react-router-dom";
-function Nav({ hidden }) {
+function Nav() {
   const location = useLocation();
 
   const menuItems = [
@@ -9,13 +9,6 @@ function Nav({ hidden }) {
     { path: "/works", name: "Projects" },
     { path: "/contact", name: "Contact" },
   ];
-
-  if (hidden)
-    return (
-      <>
-        <nav></nav>
-      </>
-    );
 
   return (
     <>

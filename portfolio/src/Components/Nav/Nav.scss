@@ -1,7 +1,11 @@
 .nav {
   background-image: linear-gradient(to right, var(--gray-color), #1a1a1a00);
-  height: 14vh;
   position: relative;
+  height: 14vh;
+
+  @media (max-width: 1027px) {
+    background-image: none;
+  }
 
   ul {
     display: flex;
@@ -11,18 +15,28 @@
     list-style: none;
     margin: 0px 50px;
     padding: 20px 0px;
-    position: absolute;
-    top: 20%;
-    right: 0%;
+
+    @media (max-width: 1027px) {
+      justify-content: center;
+    }
 
     li {
       a {
         text-decoration: none;
-        color: var(--gray-color);
+        color: var(--text-color);
         font-weight: bolder;
+
+        @media (max-width: 1027px) {
+          color: white;
+          font-weight: 400;
+        }
 
         &:hover {
           color: var(--blue-color);
+
+          @media (max-width: 1027px) {
+            color: orange;
+          }
         }
       }
     }

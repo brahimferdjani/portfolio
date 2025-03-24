@@ -1,12 +1,15 @@
 :root {
   --blue-color: rgb(0, 115, 255);
   --gray-color: #1a1a1a80;
+  --text-color: #000000aa;
 
   font-family: system-ui, "manrope", Helvetica, Arial, sans-serif;
 
   color-scheme: light dark;
   background-color: #ffffff;
   font-weight: 500;
+
+  color: var(--text-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -30,12 +33,25 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+
+@media (max-width: 1027px) {
+  :root {
+    background-color: var(--gray-color);
+    color: white;
+  }
+
+}
+
+button {
+  color: white;
 }
 
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #42e0e0;
     background-color: #000000;
   }
 

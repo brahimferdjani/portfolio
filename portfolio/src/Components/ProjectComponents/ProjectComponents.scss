@@ -1,18 +1,29 @@
 .project_box {
-  display: grid;
-  grid-template-columns: 0.8fr 1fr;
+  display: flex;
   margin: 30px auto;
-  height: 53vh;
+  height: 53.5vh;
   padding: 16px;
   margin: 37px auto;
-  color: var(--gray-color);
+
+  @media (max-width: 1027px) {
+    flex-direction: column;
+    height: 100%;
+    margin: 10px auto;
+  }
 
   .image_box {
     display: flex;
-    justify-content: center;
     padding: 15px;
+    width: 50%;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+
+    @media (max-width: 1027px) {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 0px;
+    }
 
     .arrows {
       border: none;
@@ -22,6 +33,10 @@
       height: 70px;
       color: orange;
       padding: 10px;
+
+      @media (max-width: 1027px) {
+        color: var(--blue-color);
+      }
 
       &:focus {
         outline: none;
@@ -33,28 +48,70 @@
       width: 35%;
       border: 1px solid var(--gray-color);
       border-radius: 15px;
+
+      @media (max-width: 1027px) {
+        width: 65%;
+      }
     }
   }
 
   .description_box {
     padding-right: 20px;
+
+    @media (max-width: 1027px) {
+      padding: 0px;
+    }
+
     .title {
       width: 80%;
       color: var(--blue-color);
+
+      @media (max-width: 1027px) {
+        width: 100%;
+        font-weight: 500;
+        font-size: 1.4em;
+        color: orange;
+      }
     }
 
     .description {
       display: grid;
       grid-template-columns: auto auto;
+
+      @media (max-width: 1027px) {
+        list-style-type: none;
+        padding: 0px;
+        width: 100%;
+        font-weight: 400;
+        font-size: 0.95em;
+      }
     }
 
     .link {
+      @media (max-width: 1027px) {
+        list-style: none;
+        padding: 0px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
       a {
         color: var(--blue-color);
+
+        @media (max-width: 1027px) {
+          font-weight: 400;
+          font-size: 0.95em;
+        }
 
         &:hover,
         &:active {
           color: orange;
+        }
+      }
+
+      span {
+        @media (max-width: 1027px) {
+          font-weight: 400;
+          font-size: 0.95em;
         }
       }
     }

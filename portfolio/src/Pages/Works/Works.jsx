@@ -5,11 +5,11 @@ import Clock from "../../Components/Clock/Clock";
 
 function Works() {
   return (
-    <div className="container">
+    <>
       <Nav />
       <ProjectComponents />
       <Footer children={<Clock />} className={"footer"} />
-    </div>
+    </>
   );
 }
 

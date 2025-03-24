@@ -1,20 +1,35 @@
 .cards_box {
-  margin: 20px auto;
-  padding: 70px;
   display: flex;
   flex: 1;
   gap: 50px;
   align-items: center;
   justify-content: center;
-  height: 23vh;
   flex: 1;
+  height: 53.5vh;
+  padding: 16px;
+  margin: 37px auto;
+
+  @media (max-width: 1027px) {
+    margin: 0px;
+    padding: 10px;
+    flex-direction: column;
+    gap: 15px;
+    height: 70vh;
+  }
+
   div {
     padding: 50px;
     color: white;
 
+    @media (max-width: 1027px) {
+      padding: 10px;
+    }
+
     button {
-      padding: 100px;
       background-color: var(--gray-color);
+      padding: 55px;
+      width: 100%;
+      height: 20vh;
       font-weight: bold;
       font-size: large;
       cursor: pointer;
@@ -23,9 +38,21 @@
       text-transform: uppercase;
       transition: all 0.3s ease-in-out;
 
+      @media (max-width: 1027px) {
+        padding: 15px;
+        height: 15vh;
+        font-weight: normal;
+        background-color: var(--blue-color);
+      }
+
       &:hover {
         background-color: orange;
         font-size: larger;
+
+        @media (max-width: 1027px) {
+          background-color: white;
+          color: black;
+        }
       }
 
       &:focus,

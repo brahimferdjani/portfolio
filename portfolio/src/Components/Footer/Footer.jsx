@@ -1,14 +1,9 @@
 import "./Footer.scss";
 
-function Footer({ children, className, hidden }) {
-  if (hidden)
-    <>
-      <footer></footer>
-    </>;
-
+function Footer({ children }) {
   return (
     <>
-      <footer className={className}>
+      <footer className="footer">
         {children}
         <p>Copyright © 2023 Brahim Ferdjani</p>
       </footer>

@@ -51,7 +51,7 @@ function Banner() {
         <div className="banner">
           <h1 id="title">Hi, I'm Brahim</h1>
           <p id="description">
-            I'm a Frontend Developer and Graphic Designer, I love to create
+            A Frontend Developer and Graphic Designer, I love to create
             beautiful and functional websites.
           </p>
           <button

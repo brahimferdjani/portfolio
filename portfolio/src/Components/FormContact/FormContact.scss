@@ -4,10 +4,19 @@ form {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin: 50px auto;
-  padding: 15px 0px;
-  flex: 1;
-  position: relative;
+  height: 53.5vh;
+  padding: 16px;
+  margin: 37px auto;
+
+  @media (max-width: 1027px) {
+    padding: 0px;
+    width: 100%;
+    margin-top: 85px;
+    align-items: flex-start;
+    position: relative;
+    left: 5%;
+    height: 57vh;
+  }
 
   input,
   textarea {
@@ -16,6 +25,7 @@ form {
     border: 1px solid var(--gray-color);
     border-radius: 4px;
     font-size: 16px;
+    font-weight: 500;
     background-color: white;
     margin: 10px 0px;
     padding: 10px 20px;
@@ -23,6 +33,10 @@ form {
     height: 100%;
     resize: none;
     font-family: "manrope", sans-serif;
+
+    @media (max-width: 1027px) {
+      width: 77%;
+    }
   }
 
   input {
@@ -47,12 +61,24 @@ form {
     font-size: large;
     font-weight: 800;
 
+    @media (max-width: 1027px) {
+      background-color: var(--blue-color);
+      font-weight: 400;
+      width: 50%;
+    }
+
     &:hover {
       background-color: orange;
       font-size: larger;
       width: 170px;
       font-weight: 300;
       transition: all 0.3s ease-in-out;
+
+      @media (max-width: 1027px) {
+        background-color: var(--blue-color);
+        font-weight: 400;
+        width: 86%;
+      }
     }
   }
 
@@ -66,7 +92,13 @@ form {
   top: 25%;
   right: 15%;
   text-decoration: none;
-  color: #1a1a1a80;
+  color: var(--text-color);
+
+  @media (max-width: 1027px) {
+    color: white;
+    left: 10%;
+    top: 13%;
+  }
 
   i {
     font-size: 2.5em;
@@ -90,7 +122,13 @@ form {
   top: 38%;
   right: 16%;
   text-decoration: none;
-  color: #1a1a1a80;
+  color: var(--text-color);
+
+  @media (max-width: 1027px) {
+    color: white;
+    right: 10%;
+    top: 13%;
+  }
 
   i {
     font-size: 2.5em;

@@ -20,7 +20,7 @@ function NotFound({ initialSeconds = 3 }) {
     }
   }, [secondsLeft, navigate]);
   return (
-    <div className="container">
+    <>
       <Nav />
       <div className="not_found">
         <h1>404</h1>
@@ -28,7 +28,7 @@ function NotFound({ initialSeconds = 3 }) {
         <p>redirecting to home page in {secondsLeft} seconds... </p>
       </div>
       <Footer children={<Clock />} className={"footer"} />
-    </div>
+    </>
   );
 }
 

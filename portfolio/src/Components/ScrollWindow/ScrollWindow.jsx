@@ -1,201 +1,100 @@
 import "./ScrollWindow.scss";
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { useEffect } from "react";
 
 function ScrollWindow() {
   const ref = useRef(null);
-  const tlRef = useRef(null); // Store timeline reference
-  const animationRef = useRef(null);
-
-  useEffect(() => {
-    gsap.fromTo(
-      ref.current,
-      { x: 100, opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 1,
-      }
-    );
-  }, []);
 
   useLayoutEffect(() => {
     let context = gsap.context(() => {
       const tl = gsap.timeline();
-      animationRef.current = tlRef.current = tl; // Store timeline in ref
 
-      tl.to("#title_one", {
+      tl.from(".skills_container", {
+        y: 100,
         opacity: 0,
         duration: 1,
-        delay: 1.5,
-        x: -100,
-        display: "none",
       })
-        .to(".geometry", { display: "block" })
-        .from(["#vertical", "#square", "#circle", "#horizontal"], {
-          opacity: 0,
-          display: "block",
-          stagger: 0.3,
-        })
-        .to("#vertical", {
-          x: 350,
-          y: -150,
-          duration: 1,
-          backgroundColor: "orange",
-        })
-        .to("#square", {
-          x: -490,
-          y: 205,
-          duration: 1,
-          backgroundColor: "rgb(0, 115, 255)",
-        })
-        .to("#circle", {
-          x: -430,
-          y: -175,
-          duration: 1,
-          backgroundColor: "rgb(0, 115, 255)",
-        })
-        .to("#horizontal", {
-          x: 350,
-          y: 165,
-          duration: 1,
-          backgroundColor: "orange",
-        })
-        .to(["#vertical", "#horizontal", "#square", "#circle"], {
-          opacity: 0,
-          display: "none",
-          stagger: 0.6,
-        })
-        .from(".geometry", { display: "none" })
-        .from("#title_three", {
-          display: "block",
-          x: 100,
-          opacity: 0,
-          delay: 1.2,
-        })
-        .to("#title_three", {
+        .from("#react, #dessin, #logo, #illustration, #adobe", {
+          y: 100,
           opacity: 0,
           duration: 1,
-          delay: 1.5,
-          x: -200,
-          display: "none",
+          stagger: 0.2,
         })
-        .to(["#dove_one", "#dove_three"], {
-          y: "+=80",
-          x: "-=20",
-          duration: 0.8,
-          repeat: -1,
-          yoyo: true,
-          ease: "power1.inOut",
-          color: "orange",
-        })
-        .to([".animation", "#dove_one", "#dove_two", "#dove_three"], {
-          display: "block",
-        })
-        .to("#dove_two", {
-          y: "-=80",
-          x: "+=20",
-          duration: 0.7,
-          repeat: -1,
-          yoyo: true,
-          ease: "power1.inOut",
-          color: "rgb(0, 115, 255)",
-        })
-        .to(".animation", {
-          opacity: 0,
-          duration: 2,
-          delay: 1.3,
-          x: 100,
-          display: "none",
-        })
-        .to(".end", { display: "block" })
-        .from(["#p_one", "#p_two"], {
-          x: "+=20",
+        .from(".bars_container", {
+          y: 100,
           opacity: 0,
           duration: 1,
-          stagger: 1.5,
         })
-        .to("#p_two", {
-          scale: 1.5,
-          fontWeight: 800,
-          color: "orange",
-          duration: 1.3,
-          ease: "power1.inOut",
-        })
-        .to(["#p_one", "#p_two"], {
-          x: "-=20",
+        .from("#react_bar, #artwork_bar, #photoshop_bar, #illustrator_bar", {
+          y: 100,
           opacity: 0,
           duration: 1,
-          delay: 0.5,
-          stagger: 0.5,
+          stagger: 0.2,
         })
-        .to(".end", { opacity: 0, duration: 1, x: -100, display: "none" })
-        .from(".restart", { display: "block", opacity: 0, duration: 0.4 })
-        .from(".skills_container", {
+        .from("#lang_container", {
+          y: 100,
           opacity: 0,
-          display: "none",
-          duration: 0.4,
-          delay: 0.8,
+          duration: 1,
+        })
+        .from("#title_lang", {
+          y: 100,
+          opacity: 0,
+          duration: 1,
+        })
+        .from("#en, #fr", {
+          y: 100,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.2,
         });
     }, ref);
 
     return () => context.revert();
   }, []);
 
-  // Function to skip animation
-  const skipAnimation = () => {
-    if (tlRef.current) {
-      tlRef.current.progress(1); // Jump to the end
-    }
-  };
-
-  const restartAnimation = () => {
-    if (animationRef.current) {
-      animationRef.current.restart();
-    }
-  };
-
   return (
     <>
-      <button id="skip" type="button" onClick={skipAnimation}>
-        Skip
-      </button>
       <div ref={ref} id="scroll" className="scroll_container">
-        <p className="title" id="title_one">
-          Rendering,
-        </p>
-        <div className="geometry">
-          <div id="vertical"></div>
-          <div id="horizontal"></div>
-          <div id="square"></div>
-          <div id="circle"></div>
+        <div className="skills_container">
+          <p id="title_tech">Skills :</p>
+          <ul>
+            <li id="react">React</li>
+            <li id="dessin">Graphic Design</li>
+            <li id="logo">Logo</li>
+            <li id="illustration">Artwork</li>
+            <li id="adobe">Adobe Photoshop/ Illustrator</li>
+          </ul>
         </div>
-        <p id="title_three">ANIMATION,</p>
-        <div className="animation">
-          <i id="dove_one" className="fa-solid fa-dove"></i>
-          <i id="dove_two" className="fa-solid fa-dove"></i>
-          <i id="dove_three" className="fa-solid fa-dove"></i>
+        <div className="bars_container">
+          <ul>
+            <li id="react_bar">
+              <div className="react_bar">
+                <div>React</div>
+              </div>
+            </li>
+            <li id="artwork_bar">
+              <div className="artwork_bar">
+                <div>Artwork</div>
+              </div>
+            </li>
+            <li id="photoshop_bar">
+              <div className="photoshop_bar">
+                <div>Photoshop</div>
+              </div>
+            </li>
+            <li id="illustrator_bar">
+              <div className="illustrator_bar">
+                <div>Illustrator</div>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div className="end">
-          <p id="p_one">And a touch of...</p>
-          <p id="p_two">Fun !</p>
-        </div>
-        <div className="restart">
-          <button type="button" onClick={restartAnimation} id="button">
-            Restart ?
-          </button>
-          <i id="face" className="fa-solid fa-face-smile"></i>
-          <div className="skills_container">
-            <p id="title_skills">Skills :</p>
-            <ul>
-              <li id="react">React</li>
-              <li id="dessin">Graphic Design</li>
-              <li id="logo">Logo</li>
-              <li id="illustration">Artwork</li>
-              <li id="adobe">Adobe Photoshop/ Illustrator</li>
-            </ul>
-          </div>
+        <div className="lang_container">
+          <p id="title_lang">Languages :</p>
+          <ul>
+            <li id="en">English</li>
+            <li id="fr">Français</li>
+          </ul>
         </div>
       </div>
     </>

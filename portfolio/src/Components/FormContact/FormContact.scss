@@ -1,3 +1,19 @@
+@mixin inputs {
+  color: var(--blue-color);
+  padding: 10px;
+  border: 1px solid var(--gray-color);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: white;
+  margin: 10px 0px;
+  padding: 10px 20px;
+  width: 500px;
+  height: 100%;
+  resize: none;
+  font-family: "manrope", sans-serif;
+}
+
 form {
   display: flex;
   justify-content: center;
@@ -13,7 +29,7 @@ form {
     margin: 2em auto;
     align-items: center;
     justify-content: center;
-    height: auto;
+    height: 100vh;
     max-width: 80%;
     flex-direction: column-reverse;
   }
@@ -21,35 +37,28 @@ form {
   .inputs {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
-    input,
-    textarea {
-      color: var(--blue-color);
-      padding: 10px;
-      border: 1px solid var(--gray-color);
-      border-radius: 4px;
-      font-size: 16px;
-      font-weight: 500;
-      background-color: white;
-      margin: 10px 0px;
-      padding: 10px 20px;
-      width: 500px;
-      height: 100%;
-      resize: none;
-      font-family: "manrope", sans-serif;
+    input {
+      @include inputs;
 
       @media (max-width: 1027px) {
         width: 13em;
+        height: 1.5em;
       }
     }
 
-    input {
-      height: 10px;
+    textarea {
+      @include inputs;
+      @media (max-width: 1027px) {
+        height: 11em;
+        width: 13em;
+        margin-bottom: 1.5em;
+      }
     }
 
     #message {
-      height: 100px;
       overflow: scroll;
     }
 
@@ -99,6 +108,7 @@ form {
 
   @media (max-width: 1027px) {
     flex-direction: row;
+    gap: 2em;
   }
   #linkedin {
     text-decoration: none;
@@ -111,6 +121,10 @@ form {
     i {
       font-size: 2.5em;
       transition: all 0.3s ease-in-out;
+
+      @media (max-width: 1027px) {
+        font-size: 3em;
+      }
 
       &:hover {
         color: var(--blue-color);
@@ -136,6 +150,10 @@ form {
     i {
       font-size: 2.5em;
       transition: all 0.3s ease-in-out;
+
+      @media (max-width: 1027px) {
+        font-size: 3em;
+      }
 
       &:hover {
         scale: 1.2;

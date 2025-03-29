@@ -4,6 +4,7 @@
   height: 53.5vh;
   padding: 16px;
   margin: 37px auto;
+  gap: 2em;
 
   @media (max-width: 1027px) {
     flex-direction: column;
@@ -13,8 +14,9 @@
 
   .image_box {
     display: flex;
+    flex-direction: column-reverse;
     padding: 15px;
-    width: 50%;
+    width: 50em;
     justify-content: center;
     align-items: center;
 
@@ -45,9 +47,11 @@
 
     #image {
       padding: 0px;
-      width: 35%;
+      width: 10em;
+      height: 20em;
       border-radius: 15px;
       border: 2px solid var(--gray-color);
+      object-fit: cover;
 
       @media (max-width: 1027px) {
         min-width: 45%;
@@ -58,6 +62,7 @@
 
   .description_box {
     padding-right: 20px;
+    width: 50em;
 
     @media (max-width: 1027px) {
       padding: 0px;

@@ -34,12 +34,11 @@ function FormContact() {
         setEmail("");
         setName("");
         setMessage("");
-        setErrorMessage(""); // Clear error on success
+        setErrorMessage("");
       })
       .catch((err) => console.error("EmailJS Error:", err));
   };
 
-  // GSAP animation for form elements
   useLayoutEffect(() => {
     let context = gsap.context(() => {
       const tl = gsap.timeline();
@@ -72,7 +71,6 @@ function FormContact() {
     return () => context.revert();
   }, []);
 
-  // Hide success message after 5 seconds
   useEffect(() => {
     if (messageSent && refMessage.current) {
       const timeout = setTimeout(() => {
@@ -84,7 +82,6 @@ function FormContact() {
     }
   }, [messageSent]);
 
-  // Hide error message after 3 seconds
   useEffect(() => {
     if (errorMessage) {
       const timeout = setTimeout(() => {
@@ -98,59 +95,61 @@ function FormContact() {
   return (
     <>
       <form ref={ref} onSubmit={handleSubmit}>
-        <input
-          id="name_from"
-          type="text"
-          name="name_from"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          id="email_from"
-          type="email"
-          name="email_from"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <textarea
-          id="message"
-          placeholder="Message"
-          name="message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        ></textarea>
-        <button id="button" type="submit">
-          Send
-        </button>
-        {errorMessage && <p className="error">{errorMessage}</p>}
-        {messageSent && (
-          <p ref={refMessage} id="message_sent">
-            Message sent successfully!
-          </p>
-        )}
+        <div className="inputs">
+          <input
+            id="name_from"
+            type="text"
+            name="name_from"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            id="email_from"
+            type="email"
+            name="email_from"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <textarea
+            id="message"
+            placeholder="Message"
+            name="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          ></textarea>
+          <button id="button" type="submit">
+            Send
+          </button>
+          {errorMessage && <p className="error">{errorMessage}</p>}
+          {messageSent && (
+            <p ref={refMessage} id="message_sent">
+              Message sent successfully!
+            </p>
+          )}
+        </div>
+        <div className="links" ref={socialMed} id="social_media">
+          <Link
+            id="linkedin"
+            className="linkedin"
+            to="http://linkedin.com/in/ferdjani-brahim-438919175"
+            target="_blank"
+          >
+            <p>Linkedin</p>
+            <i className="fa-brands fa-linkedin"></i>
+          </Link>
+          <Link
+            id="github"
+            className="github"
+            to="https://github.com/brahimferdjani"
+            target="_blank"
+          >
+            <p>Github</p>
+            <i className="fa-brands fa-github"></i>
+          </Link>
+        </div>
       </form>
-      <div ref={socialMed} id="social_media">
-        <Link
-          id="linkedin"
-          className="linkedin"
-          to="http://linkedin.com/in/ferdjani-brahim-438919175"
-          target="_blank"
-        >
-          <p>Linkedin</p>
-          <i className="fa-brands fa-linkedin"></i>
-        </Link>
-        <Link
-          id="github"
-          className="github"
-          to="https://github.com/brahimferdjani"
-          target="_blank"
-        >
-          <p>Github</p>
-          <i className="fa-brands fa-github"></i>
-        </Link>
-      </div>
     </>
   );
 }

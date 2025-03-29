@@ -1,5 +1,4 @@
 import { projectsDetails } from "../../Data/Data";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./ProjectComponents.scss";
 import { useEffect } from "react";

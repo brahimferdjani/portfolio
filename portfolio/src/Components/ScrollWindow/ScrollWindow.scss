@@ -1,198 +1,299 @@
-.scroll_container {
-  border: 0px;
+@mixin iconbars {
+  width: 100%;
+  background-color: orange;
+  border-radius: 10px;
   text-align: center;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 53.5vh;
-  padding: 16px;
-  margin: 37px auto;
+}
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 3em;
+  gap: 5%;
+}
+
+@mixin divBars($width) {
+  width: ($width);
+  background-color: var(--blue-color);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+@mixin titleAboutMe {
+  border-bottom: 2px solid var(--gray-color);
+  text-align: center;
+  color: orange;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.scroll_container {
+  width: 90%;
+  margin: 0px auto;
   transition: all 0.3s ease-in-out;
 
   @media (max-width: 1027px) {
     padding: 0px;
-    margin: 0px;
-    height: auto;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    margin: 0px auto;
   }
 
-  .skills_container {
+  .presentation_container {
     display: flex;
     flex-direction: column;
-    width: 200px;
-    height: 150px;
+    width: 100%;
+    margin-top: 4.4em;
 
     @media (max-width: 1027px) {
       width: 100%;
-      margin-top: 3%;
+      margin-top: 2em;
     }
 
-    #title_tech {
-      text-transform: uppercase;
+    #title_presentation {
       font-weight: 600;
       font-size: 1.1em;
       color: orange;
       border-bottom: 2px solid var(--gray-color);
     }
-    ul {
-      padding: 0;
-      list-style: none;
-      li {
-        font-size: 1em;
-        font-weight: 500;
-        text-transform: uppercase;
-        padding: 0;
-      }
-    }
-  }
 
-  .bars_container {
-    width: 300px;
-    text-transform: uppercase;
-    ul {
-      list-style-type: none;
-      padding: 0px;
-
-      li {
-        margin: 10px;
-        font-weight: 800;
-
-        .react_bar {
-          width: 100%;
-          background-color: orange;
-          border-radius: 10px;
-
-          @media (max-width: 1027px) {
-            background-color: var(--blue-color);
-          }
-
-          div {
-            width: 85%;
-            padding: 2px;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            background-color: var(--blue-color);
-            color: white;
-
-            @media (max-width: 1027px) {
-              background-color: orange;
-            }
-          }
-        }
-
-        .sass_bar {
-          width: 100%;
-          background-color: orange;
-          border-radius: 10px;
-
-          @media (max-width: 1027px) {
-            background-color: var(--blue-color);
-          }
-
-          div {
-            width: 90%;
-            padding: 2px;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            background-color: var(--blue-color);
-            color: white;
-
-            @media (max-width: 1027px) {
-              background-color: orange;
-            }
-          }
-        }
-
-        .artwork_bar {
-          width: 100%;
-          background-color: orange;
-          border-radius: 10px;
-
-          @media (max-width: 1027px) {
-            background-color: var(--blue-color);
-          }
-
-          div {
-            width: 90%;
-            padding: 2px;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            background-color: var(--blue-color);
-            color: white;
-
-            @media (max-width: 1027px) {
-              background-color: orange;
-            }
-          }
-        }
-
-        .photoshop_bar {
-          width: 100%;
-          background-color: orange;
-          border-radius: 10px;
-
-          @media (max-width: 1027px) {
-            background-color: var(--blue-color);
-          }
-
-          div {
-            width: 90%;
-            padding: 2px;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            background-color: var(--blue-color);
-            color: white;
-
-            @media (max-width: 1027px) {
-              background-color: orange;
-            }
-          }
-        }
-
-        .illustrator_bar {
-          width: 100%;
-          background-color: orange;
-          border-radius: 10px;
-
-          @media (max-width: 1027px) {
-            background-color: var(--blue-color);
-          }
-
-          div {
-            width: 90%;
-            padding: 2px;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            background-color: var(--blue-color);
-            color: white;
-
-            @media (max-width: 1027px) {
-              background-color: orange;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .lang_container {
-    text-transform: uppercase;
-    width: 200px;
-    height: 150px;
-
-    #title_lang {
-      border-bottom: 2px solid var(--gray-color);
+    p {
+      font-size: 1em;
+      font-weight: 500;
       text-align: center;
-      color: orange;
-      font-weight: 600;
+      padding: 0.2em;
+    }
+  }
+
+  .flex_one {
+    @include grid;
+
+    @media (max-width: 1027px) {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      margin-top: 1em;
+      gap: 2%;
     }
 
-    ul {
-      padding: 0px;
-      li {
+    .skills_container {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+
+      @media (max-width: 1027px) {
+        width: 100%;
+        margin-top: 3%;
+      }
+
+      #title_tech {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.1em;
+        color: orange;
+        border-bottom: 2px solid var(--gray-color);
+        text-align: center;
+      }
+      ul {
+        padding: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        li {
+          font-size: 1em;
+          font-weight: 500;
+          text-transform: uppercase;
+          padding: 0;
+          text-align: center;
+          padding: 0.5em;
+
+          svg {
+            transition: all 0.3s ease-in-out;
+            @media (max-width: 1027px) {
+              width: 2.5em;
+              height: 2.5em;
+            }
+          }
+        }
+      }
+    }
+
+    .bars_container {
+      width: 300px;
+      text-transform: uppercase;
+      margin-bottom: 3%;
+
+      @media (max-width: 1027px) {
+        margin: 0px auto 5px;
+      }
+
+      ul {
         list-style-type: none;
+        padding: 0px;
+
+        li {
+          margin: 10px;
+          font-weight: 800;
+          color: white;
+
+          .js_bar {
+            @include iconbars;
+
+            @media (max-width: 1027px) {
+              background-color: var(--blue-color);
+            }
+
+            div {
+              @include divBars(50%);
+
+              @media (max-width: 1027px) {
+                background-color: orange;
+              }
+            }
+          }
+
+          .redux_bar {
+            @include iconbars;
+
+            @media (max-width: 1027px) {
+              background-color: var(--blue-color);
+            }
+
+            div {
+              @include divBars(50%);
+
+              @media (max-width: 1027px) {
+                background-color: orange;
+              }
+            }
+          }
+
+          .react_bar {
+            @include iconbars;
+
+            @media (max-width: 1027px) {
+              background-color: var(--blue-color);
+            }
+
+            div {
+              @include divBars(50%);
+
+              @media (max-width: 1027px) {
+                background-color: orange;
+              }
+            }
+          }
+
+          .sass_bar {
+            @include iconbars;
+
+            @media (max-width: 1027px) {
+              background-color: var(--blue-color);
+            }
+
+            div {
+              @include divBars(65%);
+
+              @media (max-width: 1027px) {
+                background-color: orange;
+              }
+            }
+          }
+
+          .artwork_bar {
+            @include iconbars;
+
+            @media (max-width: 1027px) {
+              background-color: var(--blue-color);
+            }
+
+            div {
+              @include divBars(65%);
+
+              @media (max-width: 1027px) {
+                background-color: orange;
+              }
+            }
+          }
+
+          .photoshop_bar {
+            @include iconbars;
+
+            @media (max-width: 1027px) {
+              background-color: var(--blue-color);
+            }
+
+            div {
+              @include divBars(50%);
+
+              @media (max-width: 1027px) {
+                background-color: orange;
+              }
+            }
+          }
+
+          .illustrator_bar {
+            @include iconbars;
+
+            @media (max-width: 1027px) {
+              background-color: var(--blue-color);
+            }
+
+            div {
+              @include divBars(65%);
+
+              @media (max-width: 1027px) {
+                background-color: orange;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .lang_container {
+      width: 200px;
+      margin-bottom: 3%;
+
+      @media (max-width: 1027px) {
+        margin: 0px auto 5px;
+      }
+
+      p {
+        @include titleAboutMe;
+      }
+
+      ul {
+        li {
+          list-style-type: square;
+          padding: 0em;
+
+          &:first-child {
+            padding-bottom: 0.5em;
+          }
+        }
+      }
+    }
+
+    .education_container {
+      width: 200px;
+
+      @media (max-width: 1027px) {
+        margin: 0px auto;
+      }
+
+      p {
+        @include titleAboutMe;
+      }
+
+      ul {
+        margin-bottom: 5em;
+        li {
+          text-align: left;
+          list-style-type: square;
+          padding: 0px;
+
+          &:first-child {
+            padding-bottom: 1em;
+          }
+        }
       }
     }
   }

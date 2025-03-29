@@ -21,7 +21,6 @@
 ::selection {
   background: orange;
   color: var(--blue-color);
-  /* White text */
 }
 
 ::-moz-selection {
@@ -40,6 +39,10 @@ body {
   :root {
     background-color: var(--gray-color);
     color: white;
+  }
+
+  body {
+    height: auto;
   }
 
 }

@@ -10,17 +10,23 @@ function Nav() {
     { path: "/contact", name: "Contact" },
   ];
 
+  const samePath = menuItems.filter((path) => path.path === location.pathname);
+  console.log(samePath);
+
   return (
     <>
       <nav className="nav">
         <ul>
-          {menuItems
-            .filter((item) => item.path !== location.pathname)
-            .map((item) => (
-              <li key={item.path}>
-                <Link to={item.path}>{item.name}</Link>
-              </li>
-            ))}
+          {menuItems.map((item) => (
+            <li key={item.path}>
+              <Link
+                className={item.path === location.pathname ? "inactive" : ""}
+                to={item.path}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </>

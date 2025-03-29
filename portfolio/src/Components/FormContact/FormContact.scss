@@ -1,9 +1,8 @@
 form {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 3em;
   height: 53.5vh;
   padding: 16px;
   margin: 37px auto;
@@ -11,138 +10,143 @@ form {
   @media (max-width: 1027px) {
     padding: 0px;
     width: 100%;
-    margin-top: 85px;
+    margin-top: 2em;
     align-items: center;
     justify-content: center;
-    height: 57vh;
+    height: 63vh;
     max-width: 70%;
+    flex-direction: column-reverse;
   }
 
-  input,
-  textarea {
-    color: var(--blue-color);
-    padding: 10px;
-    border: 1px solid var(--gray-color);
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: 500;
-    background-color: white;
-    margin: 10px 0px;
-    padding: 10px 20px;
-    width: 500px;
-    height: 100%;
-    resize: none;
-    font-family: "manrope", sans-serif;
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    @media (max-width: 1027px) {
-      width: 77%;
-    }
-  }
+    input,
+    textarea {
+      color: var(--blue-color);
+      padding: 10px;
+      border: 1px solid var(--gray-color);
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: 500;
+      background-color: white;
+      margin: 10px 0px;
+      padding: 10px 20px;
+      width: 500px;
+      height: 100%;
+      resize: none;
+      font-family: "manrope", sans-serif;
 
-  input {
-    height: 10px;
-  }
-
-  #message {
-    height: 100px;
-    overflow: scroll;
-  }
-
-  button {
-    padding: 10px 20px;
-    background-color: var(--gray-color);
-    width: 150px;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 10px;
-    font-size: large;
-    font-weight: 800;
-
-    @media (max-width: 1027px) {
-      background-color: var(--blue-color);
-      font-weight: 400;
-      width: 50%;
+      @media (max-width: 1027px) {
+        width: 20em;
+      }
     }
 
-    &:hover {
-      background-color: orange;
-      font-size: larger;
-      width: 170px;
-      font-weight: 300;
-      transition: all 0.3s ease-in-out;
+    input {
+      height: 10px;
+    }
+
+    #message {
+      height: 100px;
+      overflow: scroll;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: var(--gray-color);
+      width: 150px;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      font-size: large;
+      font-weight: 800;
 
       @media (max-width: 1027px) {
         background-color: var(--blue-color);
         font-weight: 400;
-        width: 86%;
+        width: 50%;
+      }
+
+      &:hover {
+        background-color: orange;
+        font-size: larger;
+        width: 170px;
+        font-weight: 300;
+        transition: all 0.3s ease-in-out;
+
+        @media (max-width: 1027px) {
+          background-color: var(--blue-color);
+          font-weight: 400;
+          width: 86%;
+        }
       }
     }
-  }
 
-  p {
-    color: var(--blue-color);
-  }
-}
-
-#linkedin {
-  position: absolute;
-  top: 25%;
-  right: 15%;
-  text-decoration: none;
-  color: var(--text-color);
-
-  @media (max-width: 1027px) {
-    color: white;
-    left: 10%;
-    top: 13%;
-  }
-
-  i {
-    font-size: 2.5em;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
+    p {
       color: var(--blue-color);
-      scale: 1.2;
     }
-  }
-
-  p {
-    text-align: left;
-    padding: 0.5em;
-    font-weight: 500;
   }
 }
 
-#github {
-  position: absolute;
-  top: 38%;
-  right: 16%;
-  text-decoration: none;
-  color: var(--text-color);
+.links {
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 1027px) {
-    color: white;
-    right: 10%;
-    top: 13%;
+    flex-direction: row;
   }
+  #linkedin {
+    text-decoration: none;
+    color: var(--text-color);
 
-  i {
-    font-size: 2.5em;
-    transition: all 0.3s ease-in-out;
+    @media (max-width: 1027px) {
+      color: white;
+    }
 
-    &:hover {
-      scale: 1.2;
-      color: black;
+    i {
+      font-size: 2.5em;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--blue-color);
+        scale: 1.2;
+      }
+    }
+
+    p {
+      text-align: left;
+      padding: 0.5em;
+      font-weight: 500;
     }
   }
 
-  p {
-    text-align: left;
-    padding: 0.5em;
-    font-weight: 500;
+  #github {
+    text-decoration: none;
+    color: var(--text-color);
+
+    @media (max-width: 1027px) {
+      color: white;
+    }
+
+    i {
+      font-size: 2.5em;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        scale: 1.2;
+        color: black;
+      }
+    }
+
+    p {
+      text-align: left;
+      padding: 0.5em;
+      font-weight: 500;
+    }
   }
 }

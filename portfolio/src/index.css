@@ -47,15 +47,3 @@ body {
 button {
   color: white;
 }
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #42e0e0;
-    background-color: #000000;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-}

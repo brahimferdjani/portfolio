@@ -5,7 +5,7 @@
   margin: 11.5% auto;
 
   @media (max-width: 1027px) {
-    height: 65vh;
+    height: 100vh;
     background-image: none;
   }
 
@@ -14,25 +14,23 @@
     flex-direction: column;
     width: 80%;
     margin: 0px auto;
+
     @media (max-width: 1027px) {
+      height: auto;
+      gap: 3em;
+      justify-content: center;
     }
 
     #title {
       font-size: 2em;
       margin: 3% 0px;
       text-align: right;
-
-      @media (max-width: 1027px) {
-      }
     }
 
     #description {
       font-size: 1.5em;
       text-align: right;
       margin-bottom: 5%;
-
-      @media (max-width: 1027px) {
-      }
     }
 
     button {
@@ -48,9 +46,6 @@
       padding: 0;
       width: auto;
       margin: 0px auto;
-
-      @media (max-width: 1027px) {
-      }
 
       &:hover {
         color: var(--blue-color);

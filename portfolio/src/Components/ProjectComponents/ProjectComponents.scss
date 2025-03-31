@@ -33,6 +33,7 @@
 
     @media (max-width: 1027px) {
       font-size: 0.8em;
+      font-weight: bold;
     }
   }
 
@@ -109,6 +110,7 @@
     .description {
       display: grid;
       grid-template-columns: auto auto;
+      list-style-type: square;
 
       @media (max-width: 1027px) {
         list-style-type: none;

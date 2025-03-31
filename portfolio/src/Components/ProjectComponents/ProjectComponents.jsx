@@ -17,6 +17,33 @@ function ProjectComponents() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [title, setTitle] = useState("");
 
+  const renderSwitch = (params) => {
+    return params.map((param, index) => {
+      switch (param) {
+        case "React":
+          return <FaReact size={30} key={index} />;
+        case "Sass":
+          return <FaSass size={30} key={index} />;
+        case "HTML5":
+          return <FaHtml5 size={30} key={index} />;
+        case "Redux":
+          return <SiRedux size={20} key={index} />;
+        case "Javascript":
+          return <IoLogoJavascript size={30} key={index} />;
+        case "Responsive":
+          return <DiResponsive size={40} key={index} />;
+        case "NodeJs":
+          return <FaNodeJs size={30} key={index} />;
+        case "Router":
+          return <SiReactrouter size={30} key={index} />;
+        case "ReactRouter":
+          return <SiReactrouter size={30} key={index} />;
+        default:
+          return "unknown";
+      }
+    });
+  };
+
   const handleTitle = (index) => {
     setCurrentIndex(index);
     setTitle(projectsDetails[index].title);
@@ -86,9 +113,11 @@ function ProjectComponents() {
         <h1 className="title">{currentProject.title}</h1>
         <p>{currentProject.undertitle}</p>
         <ul className="description">
-          {currentProject.technologies.map((technologie, title) => (
-            <li key={title}>{technologie}</li>
-          ))}
+          {renderSwitch(projectsDetails[currentIndex].technologies).map(
+            (technologie, index) => (
+              <li key={index}>{technologie}</li>
+            )
+          )}
         </ul>
         {currentProject.description && <p>{currentProject.description}</p>}
         <ul className="link">

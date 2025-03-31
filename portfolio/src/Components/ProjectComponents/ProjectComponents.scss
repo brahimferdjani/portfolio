@@ -31,7 +31,7 @@
     }
 
     @media (max-width: 1027px) {
-      width: 10%;
+      width: 3em;
     }
   }
 
@@ -78,7 +78,7 @@
       object-fit: contain;
 
       @media (max-width: 1027px) {
-        min-width: 45%;
+        max-width: 70%;
         border: 2px solid white;
       }
     }
@@ -160,7 +160,7 @@
 
   @media (max-width: 1027px) {
     flex-direction: column;
-    height: 100vh;
+    height: auto;
     margin: 10px auto;
   }
 

@@ -31,7 +31,7 @@
     }
 
     @media (max-width: 1027px) {
-      width: 3em;
+      width: auto;
     }
   }
 
@@ -167,6 +167,7 @@
   .link_box {
     .link_project {
       display: flex;
+      padding: 0px;
       flex-wrap: wrap;
       margin: 0px auto;
       width: 70%;

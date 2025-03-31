@@ -11,10 +11,11 @@
     flex-direction: column;
     height: auto;
     margin: 10px auto;
+    font-size: 0.9em;
   }
 
   .close {
-    width: 40%;
+    width: auto;
     margin: 0px auto;
     border-radius: 10px;
     border: none;
@@ -28,10 +29,6 @@
     &:hover {
       background-color: var(--blue-color);
       scale: 1.1;
-    }
-
-    @media (max-width: 1027px) {
-      width: auto;
     }
   }
 

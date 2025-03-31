@@ -14,6 +14,26 @@
   font-family: "manrope", sans-serif;
 }
 
+@mixin buttonBlue {
+  padding: 10px 20px;
+  background-color: var(--gray-color);
+  width: 150px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: large;
+  font-weight: 800;
+
+  @media (max-width: 1027px) {
+    background-color: var(--blue-color);
+    font-weight: 400;
+    width: 50%;
+  }
+}
+
 form {
   display: flex;
   justify-content: center;
@@ -62,23 +82,7 @@ form {
     }
 
     button {
-      padding: 10px 20px;
-      background-color: var(--gray-color);
-      width: 150px;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-bottom: 10px;
-      font-size: large;
-      font-weight: 800;
-
-      @media (max-width: 1027px) {
-        background-color: var(--blue-color);
-        font-weight: 400;
-        width: 50%;
-      }
+      @include buttonBlue;
 
       &:hover {
         background-color: orange;

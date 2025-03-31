@@ -104,7 +104,7 @@ function ProjectComponents() {
       </div>
     </div>
   ) : (
-    <div ref={ref} className="project_box">
+    <div ref={ref} className="project_box_two">
       <div className="link_box">
         <ul className="link_project">
           {projectsDetails.map((project, index) => (
@@ -120,6 +120,7 @@ function ProjectComponents() {
                   alt={project.title}
                 />
               </button>
+              <p>{project.title}</p>
             </li>
           ))}
         </ul>

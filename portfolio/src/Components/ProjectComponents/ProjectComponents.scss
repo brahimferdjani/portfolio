@@ -9,7 +9,7 @@
 
   @media (max-width: 1027px) {
     flex-direction: column;
-    height: 100%;
+    height: auto;
     margin: 10px auto;
   }
 
@@ -17,11 +17,18 @@
     width: 40%;
     margin: 0px auto;
     border-radius: 10px;
-
+    border: none;
+    cursor: pointer;
     color: white;
     font-size: 1.2em;
     font-family: "manrope", sans-serif;
     background-color: orange;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--blue-color);
+      scale: 1.1;
+    }
 
     @media (max-width: 1027px) {
       width: 10%;
@@ -35,6 +42,7 @@
     width: 50em;
     justify-content: center;
     align-items: center;
+    border-radius: 4px;
 
     @media (max-width: 1027px) {
       width: 100%;
@@ -140,6 +148,21 @@
       }
     }
   }
+}
+
+.project_box_two {
+  display: flex;
+  margin: 20px auto;
+  height: 53.5vh;
+  padding: 16px;
+  margin: 37px auto;
+  justify-content: center;
+
+  @media (max-width: 1027px) {
+    flex-direction: column;
+    height: 100vh;
+    margin: 10px auto;
+  }
 
   .link_box {
     .link_project {
@@ -159,13 +182,19 @@
           height: 12em;
           border: 2px solid orange;
           padding: 0em;
-          flex: 0 0 auto; /* Prevents items from shrinking */
+          flex: 0 0 auto;
 
           .image_link {
             width: 100%;
             height: 100%;
             object-fit: cover;
           }
+        }
+
+        p {
+          text-align: center;
+          margin: 0.4em auto;
+          text-transform: uppercase;
         }
       }
     }

@@ -22,6 +22,10 @@
     font-size: 1.2em;
     font-family: "manrope", sans-serif;
     background-color: orange;
+
+    @media (max-width: 1027px) {
+      width: 10%;
+    }
   }
 
   .image_box {

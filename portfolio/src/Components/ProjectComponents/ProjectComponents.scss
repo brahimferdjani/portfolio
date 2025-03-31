@@ -1,15 +1,27 @@
 .project_box {
   display: flex;
-  margin: 30px auto;
+  margin: 20px auto;
   height: 53.5vh;
   padding: 16px;
   margin: 37px auto;
   gap: 2em;
+  justify-content: center;
 
   @media (max-width: 1027px) {
     flex-direction: column;
     height: 100%;
     margin: 10px auto;
+  }
+
+  .close {
+    width: 40%;
+    margin: 0px auto;
+    border-radius: 10px;
+
+    color: white;
+    font-size: 1.2em;
+    font-family: "manrope", sans-serif;
+    background-color: orange;
   }
 
   .image_box {
@@ -47,11 +59,11 @@
 
     #image {
       padding: 0px;
-      width: 10em;
+      width: 20em;
       height: 20em;
       border-radius: 15px;
       border: 2px solid var(--gray-color);
-      object-fit: cover;
+      object-fit: contain;
 
       @media (max-width: 1027px) {
         min-width: 45%;
@@ -66,6 +78,7 @@
 
     @media (max-width: 1027px) {
       padding: 0px;
+      width: auto;
     }
 
     .title {
@@ -119,6 +132,36 @@
         @media (max-width: 1027px) {
           font-weight: 400;
           font-size: 0.95em;
+        }
+      }
+    }
+  }
+
+  .link_box {
+    .link_project {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0px auto;
+      width: 70%;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        list-style: none;
+
+        .button_link {
+          width: 12em;
+          height: 12em;
+          border: 2px solid orange;
+          padding: 0em;
+          flex: 0 0 auto; /* Prevents items from shrinking */
+
+          .image_link {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
         }
       }
     }

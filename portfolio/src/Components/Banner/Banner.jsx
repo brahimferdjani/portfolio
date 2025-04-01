@@ -29,7 +29,7 @@ function Banner() {
           duration: 1,
           delay: 0.3,
         })
-        .from("#button", {
+        .from("#buttonWelcome", {
           x: -500,
           opacity: 0,
           duration: 1,
@@ -55,7 +55,7 @@ function Banner() {
             beautiful and functional websites.
           </p>
           <button
-            id="button"
+            id="buttonWelcome"
             type="button"
             className="button"
             onClick={() => handleExit()}

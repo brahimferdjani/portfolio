@@ -16,6 +16,7 @@
   .banner {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     width: 80%;
     margin: 0px auto;
 
@@ -37,27 +38,18 @@
       margin-bottom: 5%;
     }
 
-    button {
-      width: auto;
-      height: 2em;
-      margin: 0px auto;
+    #buttonWelcome {
+      width: 3em;
+      font-size: 1.5em;
       border-radius: 10px;
-      border: none;
-      cursor: pointer;
-      color: white;
-      font-size: 1.2em;
-      font-family: "manrope", sans-serif;
+      border: transparent;
       background-color: orange;
+      margin: 0px auto;
+      font-family: "manrope", sans-serif;
       transition: all 0.3s ease-in-out;
 
       &:hover {
         background-color: var(--blue-color);
-        scale: 1.1;
-      }
-
-      @media (max-width: 1027px) {
-        font-size: 1.3em;
-        font-weight: bold;
       }
 
       &:focus,

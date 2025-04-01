@@ -83,7 +83,7 @@ function ProjectComponents() {
         type="button"
         onClick={() => setTitle("")}
       >
-        Back
+        Close
       </button>
       <div className="image_box">
         {projectsDetails.length > 1 && (

@@ -44,7 +44,7 @@ export const projectsDetails = [
             "Sass",
             "Responsive",
         ],
-        "description": "OhMyFood is a mobile-first web interface, integrating CSS animations to enhance it's visual appeal but also to improve the user experience. It was on of  this OpenClassrooms project, I have enhanced my skills in HTML5 and SASS for the responsive. My third project. "
+        "description": "OhMyFood is a mobile-first web interface, integrating CSS animations to enhance it's visual appeal but also to improve the user experience. It was on of  this OpenClassrooms project, I have enhanced my skills in HTML5 and SASS for the responsive. My third project mastering even more HTML and CSS. "
 
     },
     {
@@ -58,7 +58,7 @@ export const projectsDetails = [
             "Sass",
             "Responsive",
         ],
-        "description": "My portfolio.",
+        "description": "My portfolio. I enjoyed making my portfolio. It was challenging to think of a theme and concept.",
     },
     {
         "title": "Booki,",
@@ -70,7 +70,7 @@ export const projectsDetails = [
             "HTML5",
             "Responsive",
         ],
-        "description": "Booki is a responsive web interface. This project integrates designs accurately with HTML and CSS, setting up an efficient development environment. My second project introducing me to HTML and CSS, it was challenging at first, but as I learned more, it became more enjoyable. "
+        "description": "Booki is a responsive web interface. This project integrates designs accurately with HTML and CSS, setting up an efficient development environment. My second project introducing me to HTML and CSS, it was tough at first, but as I learned more, it became more enjoyable. "
 
     },
     {
@@ -84,7 +84,7 @@ export const projectsDetails = [
             "Responsive",
             "Redux",
         ],
-        "description": "ArgentBank is a dynamic and responsive front end banking application. In this project I learned to create a web page by integrating the front end with the back end via API calls."
+        "description": "ArgentBank is a dynamic and responsive front end banking application. In this project I learned to create a web page by integrating the front end with the back end via API calls. I loved this project, especially when I was implementing secure connection from the account with the user email and password. "
 
     },
 ]

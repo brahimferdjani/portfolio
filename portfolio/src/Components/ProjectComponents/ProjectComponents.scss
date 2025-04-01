@@ -191,9 +191,15 @@
         .button_link {
           width: 12em;
           height: 12em;
-          border: 2px solid orange;
+          border: 2px solid var(--blue-color);
           padding: 0em;
           flex: 0 0 auto;
+
+          @media (max-width: 1027px) {
+            width: 10em;
+            height: 10em;
+            border: 2px solid orange;
+          }
 
           .image_link {
             width: 100%;

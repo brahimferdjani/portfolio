@@ -5,4 +5,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 1027px) {
+    height: 100vh;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  &:last-child {
+    margin-top: 2.5em;
+  }
+
+  .fa-circle-xmark {
+    font-size: 3em;
+    color: red;
+  }
 }

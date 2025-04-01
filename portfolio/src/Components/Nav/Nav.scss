@@ -37,7 +37,7 @@
           color: var(--blue-color);
 
           @media (max-width: 1027px) {
-            color: orange;
+            color: var(--blue-color);
           }
         }
       }

@@ -47,6 +47,7 @@
 
       &:hover {
         background-color: orange;
+        color: var(--gray-color);
         font-size: larger;
 
         @media (max-width: 1027px) {

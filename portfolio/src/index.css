@@ -5,7 +5,6 @@
 
   font-family: system-ui, "manrope", Helvetica, Arial, sans-serif;
 
-  color-scheme: light dark;
   background-color: #ffffff;
   font-weight: 500;
 
@@ -37,7 +36,7 @@ body {
 
 @media (max-width: 1027px) {
   :root {
-    background-color: var(--gray-color);
+    background-color: black;
     color: white;
   }
 

@@ -38,30 +38,31 @@
     }
 
     button {
-      border-radius: 15px;
-      border: 1px solid transparent;
-      font-weight: 500;
-      cursor: pointer;
-      background-color: transparent;
-      font-weight: bold;
-      font-style: italic;
-      font-size: 1.4em;
-      transition: color 0.3s ease-in-out;
-      padding: 0;
       width: auto;
+      height: 2em;
       margin: 0px auto;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      color: white;
+      font-size: 1.2em;
+      font-family: "manrope", sans-serif;
+      background-color: orange;
+      transition: all 0.3s ease-in-out;
 
       &:hover {
-        color: var(--blue-color);
+        background-color: var(--blue-color);
+        scale: 1.1;
+      }
 
-        @media (max-width: 1027px) {
-          color: orange;
-        }
+      @media (max-width: 1027px) {
+        font-size: 1.3em;
+        font-weight: bold;
       }
 
       &:focus,
-      &:focus-visible {
-        outline: 0px;
+      &:active {
+        outline: none;
       }
     }
   }

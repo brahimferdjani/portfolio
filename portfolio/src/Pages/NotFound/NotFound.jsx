@@ -23,9 +23,11 @@ function NotFound({ initialSeconds = 3 }) {
     <>
       <Nav />
       <div className="not_found">
+        <i className="fa-solid fa-circle-xmark"></i>
         <h1>404</h1>
         <p>Page not found</p>
         <p>redirecting to home page in {secondsLeft} seconds... </p>
+        <i className="fa-solid fa-circle-xmark"></i>
       </div>
       <Footer children={<Clock />} className={"footer"} />
     </>

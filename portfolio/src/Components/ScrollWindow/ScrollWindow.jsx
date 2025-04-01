@@ -56,14 +56,6 @@ function ScrollWindow() {
             stagger: 0.2,
           }
         )
-        .from(
-          "#reactpercent, #sasspercent, #artworkpercent, #jspercent, #reduxpercent, #photoshoppercent, #illustratorpercent",
-          {
-            width: 0,
-            opacity: 0,
-            duration: 1,
-          }
-        )
         .from("#title_lang", {
           y: 50,
           opacity: 0,
@@ -135,39 +127,25 @@ function ScrollWindow() {
           <div className="bars_container">
             <ul>
               <li id="react_bar">
-                <div className="react_bar">
-                  <div id="reactpercent">React</div>
-                </div>
+                <div id="reactpercent">React: Intermediate</div>
               </li>
               <li id="sass_bar">
-                <div className="sass_bar">
-                  <div id="sasspercent">SASS</div>
-                </div>
+                <div id="sasspercent">Sass : Advanced</div>
               </li>
               <li id="artwork_bar">
-                <div className="artwork_bar">
-                  <div id="artworkpercent">HTML5</div>
-                </div>
+                <div id="artworkpercent">Html5 : Advanced</div>
               </li>
               <li id="js_bar">
-                <div className="js_bar">
-                  <div id="jspercent">JAVASCRIPT</div>
-                </div>
+                <div id="jspercent">JavaScript : Intermediate</div>
               </li>
               <li id="redux_bar">
-                <div className="redux_bar">
-                  <div id="reduxpercent">REDUX</div>
-                </div>
+                <div id="reduxpercent">Redux : Intermediate</div>
               </li>
               <li id="photoshop_bar">
-                <div className="photoshop_bar">
-                  <div id="photoshoppercent">Photoshop</div>
-                </div>
+                <div id="photoshoppercent">Photoshop : Advanced</div>
               </li>
               <li id="illustrator_bar">
-                <div className="illustrator_bar">
-                  <div id="illustratorpercent">Illustrator</div>
-                </div>
+                <div id="illustratorpercent">Illustrator : Advanced</div>
               </li>
             </ul>
           </div>

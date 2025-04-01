@@ -22,9 +22,13 @@
 @mixin titleAboutMe {
   border-bottom: 2px solid var(--gray-color);
   text-align: center;
-  color: orange;
+  color: var(--blue-color);
   font-weight: 600;
   text-transform: uppercase;
+
+  @media (max-width: 1027px) {
+    color: orange;
+  }
 }
 
 .scroll_container {
@@ -46,6 +50,12 @@
     @media (max-width: 1027px) {
       width: 100%;
       margin-top: 2em;
+    }
+
+    p {
+      @media (max-width: 1027px) {
+        font-size: 0.9em;
+      }
     }
 
     #title_presentation {
@@ -77,6 +87,7 @@
     .skills_container {
       display: flex;
       flex-direction: column;
+      flex-wrap: wrap;
       width: 200px;
 
       @media (max-width: 1027px) {
@@ -85,12 +96,7 @@
       }
 
       #title_tech {
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 1.1em;
-        color: orange;
-        border-bottom: 2px solid var(--gray-color);
-        text-align: center;
+        @include titleAboutMe;
       }
       ul {
         padding: 0;
@@ -117,22 +123,23 @@
     }
 
     .bars_container {
-      width: 300px;
-      text-transform: uppercase;
+      width: auto;
       margin-bottom: 3%;
+      font-size: 0.9em;
 
       @media (max-width: 1027px) {
         margin: 0px auto 5px;
       }
 
       ul {
-        list-style-type: none;
+        list-style-type: square;
         padding: 0px;
+        margin: 0px auto;
 
         li {
           margin: 10px;
           font-weight: 800;
-          color: white;
+          color: inherit;
 
           .js_bar {
             @include iconbars;

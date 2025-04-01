@@ -94,7 +94,7 @@ function ScrollWindow() {
           </p>
           <p id="then">
             Passionate about clean code, best practices and a strong
-            understanding of SEO, accessibility, and responsive design
+            understanding of SEO, accessibility, and responsive design.
           </p>
         </div>
         <div className="flex_one">

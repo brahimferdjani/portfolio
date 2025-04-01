@@ -30,7 +30,7 @@ export const projectsDetails = [
             "ReactRouter",
             "NodeJs",
         ],
-        "description": "Kasa is a dynamique and responsive web application using React and React Router. Thanks to SASS managing CSS and implementing CSS animations, the app is visually appealing."
+        "description": "Kasa is a dynamique and responsive web application using React and React Router. Thanks to SASS managing CSS and implementing CSS animations, the app is visually appealing. It's an OpenClassrooms project in which i had a lot of fun and in which i have enhanced my skills in React and React Router."
     },
     {
         "title": "OhMyFood,",
@@ -44,7 +44,7 @@ export const projectsDetails = [
             "Sass",
             "Responsive",
         ],
-        "description": "OhMyFood is a mobile-first web interface, integrating CSS animations to enhance it's visual appeal but also to improve the user experience."
+        "description": "OhMyFood is a mobile-first web interface, integrating CSS animations to enhance it's visual appeal but also to improve the user experience. It was on of  this OpenClassrooms project, I have enhanced my skills in HTML5 and SASS for the responsive. My third project. "
 
     },
     {
@@ -70,7 +70,7 @@ export const projectsDetails = [
             "HTML5",
             "Responsive",
         ],
-        "description": "Booki is a responsive web interface. This project integrates designs accurately with HTML and CSS, setting up an efficient development environment."
+        "description": "Booki is a responsive web interface. This project integrates designs accurately with HTML and CSS, setting up an efficient development environment. My second project introducing me to HTML and CSS, it was challenging at first, but as I learned more, it became more enjoyable. "
 
     },
     {

@@ -87,14 +87,19 @@ function ScrollWindow() {
     <>
       <div ref={ref} id="scroll" className="scroll_container">
         <div className="presentation_container">
-          <p id="I">I am a junior web developper.</p>
+          <p id="I">
+            I am a junior web developer with expertise in React.js and
+            JavaScript.
+          </p>
           <p id="am">
-            Skilled in React.js and JavaScript, I can manage state with Redux,
-            or exchange data with an API.
+            I have experience managing state with Redux and seamlessly
+            integrating APIs for dynamic web applications.
           </p>
           <p id="then">
-            Passionate about clean code, best practices and a strong
-            understanding of SEO, accessibility, and responsive design.
+            Passionate about writing clean, maintainable code, I follow best
+            practices to ensure high performance, accessibility, and SEO
+            optimization. I also prioritize responsive design to deliver
+            seamless user experiences across all devices.
           </p>
         </div>
         <div className="flex_one">

@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import "./FormContact.scss";
 import emailjs from "@emailjs/browser";
@@ -38,24 +38,6 @@ function FormContact() {
       })
       .catch((err) => console.error("EmailJS Error:", err));
   };
-
-  useLayoutEffect(() => {
-    let context = gsap.context(() => {
-      const tl = gsap.timeline();
-      tl.from("#social_media", {
-        y: -500,
-        opacity: 0,
-        duration: 1,
-        delay: 0.3,
-      }).from("#linkedin, #github", {
-        y: "+=50",
-        opacity: 0,
-        stagger: 0.5,
-      });
-    }, socialMed);
-
-    return () => context.revert();
-  }, []);
 
   useEffect(() => {
     if (messageSent && refMessage.current) {

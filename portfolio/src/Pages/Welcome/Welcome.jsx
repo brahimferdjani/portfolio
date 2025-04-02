@@ -19,7 +19,7 @@ function Welcome() {
 
   return (
     <>
-      <Banner onExit={() => {}} onClick={handleButtonClick} />
+      <Banner onClick={handleButtonClick} />
     </>
   );
 }

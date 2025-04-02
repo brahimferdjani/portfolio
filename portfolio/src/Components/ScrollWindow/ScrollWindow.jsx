@@ -1,6 +1,4 @@
 import "./ScrollWindow.scss";
-import { useLayoutEffect, useRef } from "react";
-import { gsap } from "gsap";
 import { FaReact } from "react-icons/fa";
 import { FaSass } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa";
@@ -10,82 +8,9 @@ import { SiAdobephotoshop } from "react-icons/si";
 import { SiAdobeillustrator } from "react-icons/si";
 
 function ScrollWindow() {
-  const ref = useRef(null);
-
-  useLayoutEffect(() => {
-    let context = gsap.context(() => {
-      const tl = gsap.timeline();
-
-      tl.from(
-        "#presentation_container, .bars_container, .lang_container,.education_container  ",
-        {
-          y: 50,
-          opacity: 0,
-          duration: 0.3,
-        }
-      )
-        .from("#title", {
-          y: 50,
-          opacity: 0,
-          duration: 0.3,
-        })
-        .from("#I, #am, #then", {
-          y: 50,
-          opacity: 0,
-          duration: 1,
-          stagger: 0.2,
-        })
-        .from(".skills_container", {
-          y: 50,
-          opacity: 0,
-          duration: 1,
-          delay: 0.3,
-        })
-        .from("#react, #sass, #html, #redux, #js, #illustration, #adobe", {
-          y: 50,
-          opacity: 0,
-          duration: 1,
-          stagger: 0.2,
-        })
-        .from(
-          "#react_bar, #sass_bar, #artwork_bar, #js_bar, #redux_bar, #photoshop_bar, #illustrator_bar",
-          {
-            y: 50,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.2,
-          }
-        )
-        .from("#title_lang", {
-          y: 50,
-          opacity: 0,
-          duration: 0.8,
-        })
-        .from("#en, #fr", {
-          y: 50,
-          opacity: 0,
-          duration: 1,
-          stagger: 0.2,
-        })
-        .from("#title_edu", {
-          y: 50,
-          opacity: 0,
-          duration: 0.8,
-        })
-        .from("#oc, #cl", {
-          y: 50,
-          opacity: 0,
-          duration: 1,
-          stagger: 0.2,
-        });
-    }, ref);
-
-    return () => context.revert();
-  }, []);
-
   return (
     <>
-      <div ref={ref} id="scroll" className="scroll_container">
+      <div id="scroll" className="scroll_container">
         <div className="presentation_container">
           <p id="I">
             I am a junior web developer with expertise in React.js and

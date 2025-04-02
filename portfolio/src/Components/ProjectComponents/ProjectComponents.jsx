@@ -1,9 +1,6 @@
 import { projectsDetails } from "../../Data/Data";
 import { useState } from "react";
 import "./ProjectComponents.scss";
-import { useEffect } from "react";
-import { useRef } from "react";
-import { gsap } from "gsap";
 import { SiReactrouter } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { FaSass } from "react-icons/fa";
@@ -47,19 +44,6 @@ function ProjectComponents() {
     setTitle(projectsDetails[index].title);
   };
 
-  const ref = useRef(null);
-  useEffect(() => {
-    gsap.fromTo(
-      ref.current,
-      { x: 100, opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 1,
-      }
-    );
-  }, []);
-
   const nextProject = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === projectsDetails.length - 1 ? 0 : prevIndex + 1
@@ -74,7 +58,7 @@ function ProjectComponents() {
   const currentProject = projectsDetails[title ? currentIndex : 0];
 
   return title ? (
-    <div ref={ref} className="project_box">
+    <div className="project_box">
       <button
         id="close"
         className="close"
@@ -134,7 +118,7 @@ function ProjectComponents() {
       </div>
     </div>
   ) : (
-    <div ref={ref} className="project_box_two">
+    <div className="project_box_two">
       <div className="link_box">
         <ul className="link_project">
           {projectsDetails.map((project, index) => (

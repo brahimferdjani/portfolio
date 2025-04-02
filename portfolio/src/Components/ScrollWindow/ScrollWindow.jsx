@@ -125,7 +125,7 @@ function ScrollWindow() {
                 <SiAdobephotoshop size={30} color="#3C327B" />
               </li>
               <li id="illustration">
-                <SiAdobeillustrator size={30} color=" #FBBB4D" />
+                <SiAdobeillustrator size={30} color="#FBBB4D" />
               </li>
             </ul>
           </div>

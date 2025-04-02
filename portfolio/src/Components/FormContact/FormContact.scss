@@ -12,6 +12,7 @@
   height: 100%;
   resize: none;
   font-family: "manrope", sans-serif;
+  transition: all 0.1s ease-in-out;
 }
 
 @mixin buttonBlue {
@@ -62,6 +63,13 @@ form {
     input {
       @include inputs;
 
+      &:hover,
+      &:focus,
+      &:active {
+        border: 2px solid var(--blue-color);
+        outline: none;
+      }
+
       @media (max-width: 1027px) {
         width: 13em;
         height: 1.5em;
@@ -70,6 +78,14 @@ form {
 
     textarea {
       @include inputs;
+
+      &:hover,
+      &:focus,
+      &:active {
+        border: 2px solid var(--blue-color);
+        outline: none;
+      }
+
       @media (max-width: 1027px) {
         height: 11em;
         width: 13em;

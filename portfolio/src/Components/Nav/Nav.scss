@@ -20,9 +20,12 @@
 
     @media (max-width: 1027px) {
       justify-content: center;
+      margin: 0px auto;
     }
 
     li {
+      width: auto;
+
       a {
         text-decoration: none;
         color: var(--text-color);

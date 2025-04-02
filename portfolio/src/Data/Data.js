@@ -30,7 +30,7 @@ export const projectsDetails = [
             "ReactRouter",
             "NodeJs",
         ],
-        "description": "Kasa is a dynamique and responsive web application using React and React Router. Thanks to the use of SASS managing CSS and implementing CSS animations, the app is visually appealing. It was the project in which i had a lot of fun and drove me to enhance my skills in React and React Router."
+        "description": "Kasa is a dynamic and responsive web application built with React and React Router. By leveraging SASS for efficient CSS management and animations, the app delivers a visually engaging experience. This project was both enjoyable and instrumental in strengthening my skills in React and React Router."
     },
     {
         "title": "OhMyFood,",
@@ -44,7 +44,7 @@ export const projectsDetails = [
             "Sass",
             "Responsive",
         ],
-        "description": "OhMyFood is a mobile-first web interface, integrating CSS animations to enhance it's visual appeal but also to improve the user experience. It this project, I have developped strong understanding of HTML5, SASS and the concept of responsive."
+        "description": "OhMyFood is a mobile-first web interface that incorporates CSS animations to enhance both visual appeal and user experience. Through this project, I developed a strong understanding of HTML5, SASS, and the principles of responsive design."
 
     },
     {
@@ -58,7 +58,7 @@ export const projectsDetails = [
             "Sass",
             "Responsive",
         ],
-        "description": "My portfolio. It was challenging to think of a design that would be both functional and aesthetically pleasing.",
+        "description": "My portfolio — a project that challenged me to create a design that balances functionality and aesthetics. It pushed me to think critically about user experience while ensuring a visually appealing and intuitive interface.",
     },
     {
         "title": "Booki,",
@@ -70,7 +70,7 @@ export const projectsDetails = [
             "HTML5",
             "Responsive",
         ],
-        "description": "Booki is a responsive web interface. This project integrates designs accurately with HTML and CSS, setting up an efficient development environment. This project introduced me to HTML and CSS, about nesting, tags and parameters, and also responsive design. "
+        "description": "Booki is a responsive web interface designed to accurately integrate provided designs using HTML and CSS. This project helped me build a strong foundation in web development by introducing key concepts such as HTML structure, nesting, tags, parameters, and responsive design. Additionally, I set up an efficient development environment to streamline the coding process."
 
     },
     {
@@ -84,8 +84,7 @@ export const projectsDetails = [
             "Responsive",
             "Redux",
         ],
-        "description": "ArgentBank is a dynamic and responsive front end banking application. In this project I learned to create a web page by integrating the front end with the back end via API calls. I used Redux to store and manage states through the whole web application. Thanks to Redux I could secure an account with a user mail and password."
-
+        "description": "ArgentBank is a dynamic and responsive front-end banking application. Through this project, I gained hands-on experience in integrating a web page with a back-end system using API calls. I leveraged Redux to efficiently store and manage application state, ensuring seamless user interactions. Additionally, Redux enabled secure account authentication using email and password credentials."
     },
 ]
 

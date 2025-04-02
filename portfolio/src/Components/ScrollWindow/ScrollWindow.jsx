@@ -21,13 +21,13 @@ function ScrollWindow() {
         {
           y: 50,
           opacity: 0,
-          duration: 1,
+          duration: 0.3,
         }
       )
         .from("#title", {
           y: 50,
           opacity: 0,
-          duration: 1,
+          duration: 0.3,
         })
         .from("#I, #am, #then", {
           y: 50,

@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
 import "./FormContact.scss";
 import emailjs from "@emailjs/browser";
 import { Link } from "react-router-dom";
@@ -42,7 +41,6 @@ function FormContact() {
   useEffect(() => {
     if (messageSent && refMessage.current) {
       const timeout = setTimeout(() => {
-        gsap.to(refMessage.current, { x: 100, opacity: 0, duration: 1 });
         setMessageSent(false);
       }, 5000);
 

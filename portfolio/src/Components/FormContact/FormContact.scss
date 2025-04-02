@@ -83,6 +83,7 @@ form {
 
     textarea {
       @include inputs;
+      height: 10em;
 
       &:hover,
       &:focus,

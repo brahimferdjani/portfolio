@@ -42,20 +42,6 @@ function FormContact() {
   useLayoutEffect(() => {
     let context = gsap.context(() => {
       const tl = gsap.timeline();
-      tl.from("#name_from, #email_from, #message, #button", {
-        x: "-=500",
-        stagger: 0.5,
-        opacity: 0,
-        duration: 1,
-      });
-    }, ref);
-
-    return () => context.revert();
-  }, []);
-
-  useLayoutEffect(() => {
-    let context = gsap.context(() => {
-      const tl = gsap.timeline();
       tl.from("#social_media", {
         y: -500,
         opacity: 0,

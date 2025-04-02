@@ -14,6 +14,19 @@
     font-size: 0.9em;
   }
 
+  .projectCount {
+    color: inherit;
+    font-size: 0.5em;
+    position: relative;
+    left: 10em;
+
+    @media (max-width: 1027px) {
+      font-size: 1.2em;
+      left: 0em;
+      margin: 0px auto;
+    }
+  }
+
   .close {
     width: auto;
     height: 2em;
@@ -213,6 +226,11 @@
 
           &:hover {
             scale: 1.1;
+            border-color: orange;
+
+            @media (max-width: 1027px) {
+              border-color: var(--blue-color);
+            }
           }
 
           @media (max-width: 1027px) {

@@ -21,21 +21,19 @@ function ProjectComponents() {
     return params.map((param, index) => {
       switch (param) {
         case "React":
-          return <FaReact size={30} key={index} />;
+          return <FaReact size={30} key={index} color="#61DBFB" />;
         case "Sass":
-          return <FaSass size={30} key={index} />;
+          return <FaSass size={30} key={index} color="#CD6799" />;
         case "HTML5":
-          return <FaHtml5 size={30} key={index} />;
+          return <FaHtml5 size={30} key={index} color="#E34C26" />;
         case "Redux":
           return <SiRedux size={20} key={index} />;
         case "Javascript":
-          return <IoLogoJavascript size={30} key={index} />;
+          return <IoLogoJavascript size={30} key={index} color="#F7DF1E" />;
         case "Responsive":
-          return <DiResponsive size={40} key={index} />;
+          return <DiResponsive size={40} key={index} color="#000000" />;
         case "NodeJs":
-          return <FaNodeJs size={30} key={index} />;
-        case "Router":
-          return <SiReactrouter size={30} key={index} />;
+          return <FaNodeJs size={30} key={index} color="#68A063" />;
         case "ReactRouter":
           return <SiReactrouter size={30} key={index} />;
         default:
@@ -85,6 +83,9 @@ function ProjectComponents() {
       >
         Close
       </button>
+      <p className="projectCount">
+        {currentIndex + 1}/{projectsDetails.length}
+      </p>
       <div className="image_box">
         {projectsDetails.length > 1 && (
           <button

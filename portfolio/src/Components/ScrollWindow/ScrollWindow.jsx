@@ -102,25 +102,25 @@ function ScrollWindow() {
             <p id="title_tech">Skills :</p>
             <ul>
               <li id="react">
-                <FaReact size={30} />
+                <FaReact size={30} color="#61DBFB" />
               </li>
               <li id="sass">
-                <FaSass size={30} />
+                <FaSass size={30} color="#CD6799" />
               </li>
               <li id="html">
-                <FaHtml5 size={30} />
+                <FaHtml5 size={30} color="#E34C26" />
               </li>
               <li id="redux">
                 <SiRedux size={30} />
               </li>
               <li id="js">
-                <IoLogoJavascript size={30} />
+                <IoLogoJavascript size={30} color="#F7DF1E" />
               </li>
               <li id="adobe">
-                <SiAdobephotoshop size={30} />
+                <SiAdobephotoshop size={30} color="#3C327B" />
               </li>
               <li id="illustration">
-                <SiAdobeillustrator size={30} />
+                <SiAdobeillustrator size={30} color=" #5F4B26" />
               </li>
             </ul>
           </div>

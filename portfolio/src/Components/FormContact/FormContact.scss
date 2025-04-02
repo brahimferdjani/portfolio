@@ -68,6 +68,11 @@ form {
       &:active {
         border: 2px solid var(--blue-color);
         outline: none;
+
+        @media (max-width: 1027px) {
+          border: 2px solid orange;
+          outline: none;
+        }
       }
 
       @media (max-width: 1027px) {
@@ -84,6 +89,11 @@ form {
       &:active {
         border: 2px solid var(--blue-color);
         outline: none;
+
+        @media (max-width: 1027px) {
+          border: 2px solid orange;
+          outline: none;
+        }
       }
 
       @media (max-width: 1027px) {

@@ -1,40 +1,28 @@
 import { projectsDetails } from "../../Data/Data";
 import { useState } from "react";
 import "./ProjectComponents.scss";
-import { SiReactrouter } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-import { FaSass } from "react-icons/fa";
-import { FaHtml5 } from "react-icons/fa";
-import { SiRedux } from "react-icons/si";
-import { IoLogoJavascript } from "react-icons/io";
-import { DiResponsive } from "react-icons/di";
-import { FaNodeJs } from "react-icons/fa";
 
 function ProjectComponents() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [title, setTitle] = useState("");
 
   const renderSwitch = (params) => {
-    return params.map((param, index) => {
+    return params.map((param) => {
       switch (param) {
         case "React":
-          return <FaReact size={30} key={index} color="#61DBFB" />;
+          return <i className="fa-brands fa-react"></i>;
         case "Sass":
-          return <FaSass size={30} key={index} color="#CD6799" />;
+          return <i className="fa-brands fa-sass"></i>;
         case "HTML5":
-          return <FaHtml5 size={30} key={index} color="#E34C26" />;
-        case "Redux":
-          return <SiRedux size={20} key={index} />;
+          return <i className="fa-brands fa-html5"></i>;
         case "Javascript":
-          return <IoLogoJavascript size={30} key={index} color="#F7DF1E" />;
-        case "Responsive":
-          return <DiResponsive size={40} key={index} color="#000000" />;
+          return <i className="fa-brands fa-js"></i>;
         case "NodeJs":
-          return <FaNodeJs size={30} key={index} color="#68A063" />;
-        case "ReactRouter":
-          return <SiReactrouter size={30} key={index} />;
+          return <i className="fa-brands fa-node-js"></i>;
+        case "CSS":
+          return <i className="fa-brands fa-css3-alt"></i>;
         default:
-          return "unknown";
+          return null;
       }
     });
   };

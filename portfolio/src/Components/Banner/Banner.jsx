@@ -10,15 +10,14 @@ function Banner() {
   };
   return (
     <>
-      <div id="container">
+      <div>
         <div className="banner">
-          <h1 id="title">Hi, I'm Brahim</h1>
-          <p id="description">
+          <h1>Hi, I'm Brahim</h1>
+          <p>
             A Frontend Developer also Graphic Designer, and I love to create
             beautiful and functional websites.
           </p>
           <button
-            id="buttonWelcome"
             className="buttonHome"
             type="button"
             onClick={() => handleExit()}

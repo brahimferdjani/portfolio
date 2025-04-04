@@ -1,11 +1,4 @@
 import "./ScrollWindow.scss";
-import { FaReact } from "react-icons/fa";
-import { FaSass } from "react-icons/fa";
-import { FaHtml5 } from "react-icons/fa";
-import { SiRedux } from "react-icons/si";
-import { IoLogoJavascript } from "react-icons/io";
-import { SiAdobephotoshop } from "react-icons/si";
-import { SiAdobeillustrator } from "react-icons/si";
 
 function ScrollWindow() {
   return (
@@ -14,13 +7,8 @@ function ScrollWindow() {
         <div className="presentation_container">
           <p id="I">
             I am a junior web developer with expertise in React.js and
-            JavaScript.
-          </p>
-          <p id="am">
-            I have experience managing state with Redux and seamlessly
-            integrating APIs for dynamic web applications.
-          </p>
-          <p id="then">
+            JavaScript. <br /> I have experience managing state with Redux and
+            seamlessly integrating APIs for dynamic web applications. <br />{" "}
             Passionate about writing clean, maintainable code, I follow best
             practices to ensure high performance, accessibility, and SEO
             optimization. I also prioritize responsive design to deliver
@@ -32,25 +20,19 @@ function ScrollWindow() {
             <p id="title_tech">Skills :</p>
             <ul>
               <li id="react">
-                <FaReact size={30} color="#61DBFB" />
+                <i className="fa-brands fa-react"></i>{" "}
               </li>
               <li id="sass">
-                <FaSass size={30} color="#CD6799" />
+                <i className="fa-brands fa-sass"></i>{" "}
               </li>
               <li id="html">
-                <FaHtml5 size={30} color="#E34C26" />
-              </li>
-              <li id="redux">
-                <SiRedux size={30} />
+                <i className="fa-brands fa-html5"></i>
               </li>
               <li id="js">
-                <IoLogoJavascript size={30} color="#F7DF1E" />
+                <i className="fa-brands fa-js"></i>
               </li>
               <li id="adobe">
-                <SiAdobephotoshop size={30} color="#3C327B" />
-              </li>
-              <li id="illustration">
-                <SiAdobeillustrator size={30} color="#FBBB4D" />
+                <i className="fa-brands fa-css3-alt"> </i>
               </li>
             </ul>
           </div>
@@ -58,6 +40,9 @@ function ScrollWindow() {
             <ul>
               <li id="react_bar">
                 <div id="reactpercent">React: Intermediate</div>
+              </li>
+              <li id="react_bar">
+                <div id="reactpercent">CSS : Advanced</div>
               </li>
               <li id="sass_bar">
                 <div id="sasspercent">Sass : Advanced</div>

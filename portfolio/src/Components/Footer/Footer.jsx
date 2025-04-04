@@ -1,11 +1,12 @@
 import "./Footer.scss";
 
 function Footer({ children }) {
+  const year = new Date().getFullYear();
   return (
     <>
       <footer className="footer">
         {children}
-        <p>Copyright © 2023 Brahim Ferdjani</p>
+        <p>Copyright © {year} Brahim Ferdjani</p>
       </footer>
     </>
   );

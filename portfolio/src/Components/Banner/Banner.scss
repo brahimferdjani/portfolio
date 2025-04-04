@@ -1,62 +1,51 @@
-#container {
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px auto;
+  height: 40vh;
+  margin-top: 10em;
   background-image: linear-gradient(to right, var(--gray-color), #1a1a1a00);
-  height: 30vh;
-  padding: 5% 0px;
-  margin: 11.5% auto;
+  text-align: right;
+  padding-right: 5em;
 
   @media (max-width: 1027px) {
-    height: 90vh;
-    margin: 0px auto;
-    display: flex;
-    flex-direction: column;
+    height: 60vh;
+    gap: 3em;
     justify-content: center;
-    background-image: none;
   }
 
-  .banner {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 80%;
+  #title {
+    font-size: 2em;
+    margin: 3% 0px;
+    text-align: right;
+  }
+
+  #description {
+    font-size: 1.5em;
+    text-align: right;
+    margin-bottom: 5%;
+  }
+
+  .buttonHome {
+    width: auto;
+    font-size: 1.5em;
+    border-radius: 10px;
+    border: transparent;
+    background-color: orange;
     margin: 0px auto;
+    font-family: "manrope", sans-serif;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    margin-top: 1em;
 
-    @media (max-width: 1027px) {
-      height: 60vh;
-      gap: 3em;
-      justify-content: center;
+    &:hover {
+      background-color: var(--blue-color);
     }
 
-    #title {
-      font-size: 2em;
-      margin: 3% 0px;
-      text-align: right;
-    }
-
-    #description {
-      font-size: 1.5em;
-      text-align: right;
-      margin-bottom: 5%;
-    }
-
-    .buttonHome {
-      width: auto;
-      font-size: 1.5em;
-      border-radius: 10px;
-      border: transparent;
-      background-color: orange;
-      margin: 0px auto;
-      font-family: "manrope", sans-serif;
-      transition: all 0.3s ease-in-out;
-      text-align: center;
-
-      &:hover {
-        background-color: var(--blue-color);
-      }
-
-      &:focus,
-      &:active {
-        outline: none;
-      }
+    &:focus,
+    &:active {
+      outline: none;
     }
   }
 }

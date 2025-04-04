@@ -44,8 +44,13 @@ body {
     height: auto;
   }
 
+  button {
+    font-size: 1.3em;
+  }
 }
 
 button {
   color: white;
+  font-family: 'manrope', sans-serif;
+  font-size: 1.3em;
 }

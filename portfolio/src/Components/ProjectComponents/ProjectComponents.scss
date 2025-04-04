@@ -1,11 +1,9 @@
 .project_box {
   display: flex;
-  margin: 20px auto;
   height: 53.5vh;
   padding: 16px;
   margin: 37px auto;
   gap: 2em;
-  justify-content: center;
 
   @media (max-width: 1027px) {
     flex-direction: column;
@@ -28,7 +26,6 @@
   }
 
   .close {
-    width: auto;
     height: 2em;
     margin: 0px auto;
     border-radius: 10px;
@@ -36,7 +33,6 @@
     cursor: pointer;
     color: white;
     font-size: 1.2em;
-    font-family: "manrope", sans-serif;
     background-color: orange;
     transition: all 0.3s ease-in-out;
 
@@ -63,7 +59,6 @@
     @media (max-width: 1027px) {
       width: 100%;
       flex-direction: column;
-      align-items: center;
       padding: 0px;
     }
 
@@ -138,7 +133,6 @@
       list-style-type: none;
 
       @media (max-width: 1027px) {
-        list-style-type: none;
         padding: 0px;
         width: 100%;
         font-weight: 400;
@@ -166,10 +160,10 @@
         padding: 0px;
       }
       a {
+        display: block;
         color: var(--blue-color);
         overflow: hidden;
         text-overflow: ellipsis;
-        display: block;
 
         @media (max-width: 1027px) {
           font-weight: 400;
@@ -194,7 +188,6 @@
 
 .project_box_two {
   display: flex;
-  margin: 20px auto;
   height: 53.5vh;
   padding: 16px;
   margin: 37px auto;
@@ -225,7 +218,6 @@
           height: 8em;
           border: 2px solid var(--blue-color);
           padding: 0em;
-          flex: 0 0 auto;
           transition: all 0.3s ease-in-out;
 
           &:hover {
@@ -238,8 +230,8 @@
           }
 
           @media (max-width: 1027px) {
-            width: 10em;
-            height: 10em;
+            width: 9em;
+            height: 9em;
             border: 2px solid orange;
           }
 

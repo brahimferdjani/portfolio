@@ -1,6 +1,5 @@
 @mixin inputs {
   color: var(--blue-color);
-  padding: 10px;
   border: 1px solid var(--gray-color);
   border-radius: 4px;
   font-size: 16px;
@@ -11,7 +10,6 @@
   width: 500px;
   height: 100%;
   resize: none;
-  font-family: "manrope", sans-serif;
   transition: all 0.1s ease-in-out;
 }
 
@@ -25,7 +23,6 @@
   font-size: 16px;
   cursor: pointer;
   margin-bottom: 10px;
-  font-size: large;
   font-weight: 800;
 
   @media (max-width: 1027px) {
@@ -47,9 +44,6 @@ form {
   @media (max-width: 1027px) {
     padding: 0px;
     width: 100%;
-    margin: 2em auto;
-    align-items: center;
-    justify-content: center;
     height: auto;
     flex-direction: column-reverse;
   }
@@ -57,7 +51,6 @@ form {
   .inputs {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 
     input {
@@ -71,7 +64,6 @@ form {
 
         @media (max-width: 1027px) {
           border: 2px solid orange;
-          outline: none;
         }
       }
 
@@ -84,6 +76,7 @@ form {
     textarea {
       @include inputs;
       height: 10em;
+      overflow: scroll;
 
       &:hover,
       &:focus,
@@ -93,7 +86,6 @@ form {
 
         @media (max-width: 1027px) {
           border: 2px solid orange;
-          outline: none;
         }
       }
 
@@ -102,10 +94,6 @@ form {
         width: 13em;
         margin-bottom: 1.5em;
       }
-    }
-
-    #message {
-      overflow: scroll;
     }
 
     button {
@@ -121,7 +109,7 @@ form {
         @media (max-width: 1027px) {
           background-color: var(--blue-color);
           font-weight: 400;
-          width: 86%;
+          width: 60%;
         }
       }
     }
@@ -188,6 +176,10 @@ form {
       &:hover {
         scale: 1.2;
         color: black;
+
+        @media (max-width: 1027px) {
+          color: white;
+        }
       }
     }
 

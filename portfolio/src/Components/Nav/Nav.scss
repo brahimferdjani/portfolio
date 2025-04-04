@@ -1,7 +1,5 @@
 .nav {
   background-image: linear-gradient(to right, var(--gray-color), #1a1a1a00);
-  position: relative;
-  height: 14vh;
 
   @media (max-width: 1027px) {
     background-image: none;
@@ -34,15 +32,11 @@
         @media (max-width: 1027px) {
           color: black;
           font-weight: 400;
-          font-size: 0.9em;
+          font-size: 0.95em;
         }
 
         &:hover {
           color: var(--blue-color);
-
-          @media (max-width: 1027px) {
-            color: var(--blue-color);
-          }
         }
       }
     }

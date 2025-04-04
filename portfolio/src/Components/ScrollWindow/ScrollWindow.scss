@@ -1,22 +1,8 @@
-@mixin iconbars {
-  width: 100%;
-  background-color: orange;
-  border-radius: 10px;
-  text-align: center;
-}
-
 @mixin grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 3em;
   gap: 5%;
-}
-
-@mixin divBars($width) {
-  width: ($width);
-  background-color: var(--blue-color);
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
 }
 
 @mixin titleAboutMe {
@@ -39,7 +25,6 @@
 
   @media (max-width: 1027px) {
     padding: 0px;
-    margin: 0px auto;
   }
 
   .presentation_container {
@@ -49,7 +34,6 @@
     margin-top: 4.4em;
 
     @media (max-width: 1027px) {
-      width: 100%;
       margin-top: 2em;
     }
 
@@ -79,7 +63,6 @@
 
     @media (max-width: 1027px) {
       grid-template-columns: 1fr;
-      justify-content: center;
       margin: 1em auto;
       gap: 2%;
       height: auto;
@@ -107,9 +90,6 @@
         li {
           font-size: 1em;
           font-weight: 500;
-          text-transform: uppercase;
-          padding: 0;
-          text-align: center;
           padding: 0.5em;
 
           i {
@@ -139,15 +119,11 @@
           color: inherit;
 
           .js_bar {
-            @include iconbars;
-
             @media (max-width: 1027px) {
               background-color: var(--blue-color);
             }
 
             div {
-              @include divBars(50%);
-
               @media (max-width: 1027px) {
                 background-color: orange;
               }
@@ -155,15 +131,11 @@
           }
 
           .redux_bar {
-            @include iconbars;
-
             @media (max-width: 1027px) {
               background-color: var(--blue-color);
             }
 
             div {
-              @include divBars(50%);
-
               @media (max-width: 1027px) {
                 background-color: orange;
               }
@@ -171,15 +143,11 @@
           }
 
           .react_bar {
-            @include iconbars;
-
             @media (max-width: 1027px) {
               background-color: var(--blue-color);
             }
 
             div {
-              @include divBars(50%);
-
               @media (max-width: 1027px) {
                 background-color: orange;
               }
@@ -187,15 +155,11 @@
           }
 
           .sass_bar {
-            @include iconbars;
-
             @media (max-width: 1027px) {
               background-color: var(--blue-color);
             }
 
             div {
-              @include divBars(65%);
-
               @media (max-width: 1027px) {
                 background-color: orange;
               }
@@ -203,15 +167,11 @@
           }
 
           .artwork_bar {
-            @include iconbars;
-
             @media (max-width: 1027px) {
               background-color: var(--blue-color);
             }
 
             div {
-              @include divBars(65%);
-
               @media (max-width: 1027px) {
                 background-color: orange;
               }
@@ -219,15 +179,11 @@
           }
 
           .photoshop_bar {
-            @include iconbars;
-
             @media (max-width: 1027px) {
               background-color: var(--blue-color);
             }
 
             div {
-              @include divBars(50%);
-
               @media (max-width: 1027px) {
                 background-color: orange;
               }
@@ -235,15 +191,11 @@
           }
 
           .illustrator_bar {
-            @include iconbars;
-
             @media (max-width: 1027px) {
               background-color: var(--blue-color);
             }
 
             div {
-              @include divBars(65%);
-
               @media (max-width: 1027px) {
                 background-color: orange;
               }

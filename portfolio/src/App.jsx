@@ -12,7 +12,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/welcome" element={<Welcome />} />
+          <Route path="/welcome" element={<Welcome />} strict />
           <Route
             path="/"
             element={

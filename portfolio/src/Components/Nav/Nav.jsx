@@ -4,7 +4,7 @@ function Nav() {
   const location = useLocation();
 
   const menuItems = [
-    { path: "/", name: "Home" },
+    { path: "/menu", name: "Menu" },
     { path: "/about", name: "About" },
     { path: "/works", name: "Projects" },
     { path: "/contact", name: "Contact" },

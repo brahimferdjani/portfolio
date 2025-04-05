@@ -1,15 +1,11 @@
-import Cards from "../../Components/Cards/Cards";
-import Nav from "../../Components/Nav/Nav";
-import Footer from "../../Components/Footer/Footer";
-import Clock from "../../Components/Clock/Clock";
+import Banner from "../../Components/Banner/Banner";
 
 function Home() {
   return (
     <>
-      <Nav />
-      <Cards />
-      <Footer children={<Clock />} />
+      <Banner />
     </>
   );
 }
+
 export default Home;

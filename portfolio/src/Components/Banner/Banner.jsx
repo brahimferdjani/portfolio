@@ -6,7 +6,7 @@ function Banner() {
 
   const handleExit = () => {
     sessionStorage.setItem("clicked", true);
-    navigate("/");
+    navigate("/menu");
   };
   return (
     <>

@@ -12,39 +12,10 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/welcome" element={<Welcome />} strict />
-          <Route
-            path="/"
-            element={
-              <ProtectedRoute>
-                <Home />{" "}
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/about"
-            element={
-              <ProtectedRoute>
-                <AboutMe />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/contact"
-            element={
-              <ProtectedRoute>
-                <Contact />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/works"
-            element={
-              <ProtectedRoute>
-                <Works />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutMe />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/works" element={<Works />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

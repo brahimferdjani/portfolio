@@ -1,1 +1,2 @@
-https://yourwebsite.com/robots.txt
+User-agent: *
+Disallow:
